@@ -296,7 +296,7 @@ class DMRAnalysis:
             #concatenating the two descriptive stats DF's
         df_combinded_stats = pd.concat([df_stats_no_disposition, df_stats_w_disposition])
 
-        template_path = "APCD_PowerPoint_16x9_Template.pptx"
+        template_path = "PowerPoint_16x9_Template.pptx"
         presentation = Presentation(template_path)
 
         currentDate = datetime.now().strftime('%m/%d/%Y')
@@ -305,7 +305,7 @@ class DMRAnalysis:
         title_slide = presentation.slides.add_slide(title_slide_layout)
         title = title_slide.shapes.title
         subtitle = title_slide.placeholders[1]
-        title.text = f'APCD Daily DMR Log - {currentDate}'
+        title.text = f'Daily DMR Log - {currentDate}'
         subtitle.text = "Analysis done by Ojasvi Mukkoti"
 
             #list that will store all the slides and then go through them to remove the textboxes
@@ -456,8 +456,8 @@ class DMRAnalysis:
                         if not shape==slide.shapes.title:
                             slide.shapes._spTree.remove(shape._element) 
                             
-            #saving the presentation to the APCD DMR Log folder
-        output_directory = r'P:\Quality\DMR\APCD Daily DMR Log'
+            #saving the presentation to a DMR Log folder
+        output_directory = "Name of Output Directory"
         output_filename = f'DMR_Analysis_{formatted_current_date}.pptx'
         full_output_path = os.path.join(output_directory, output_filename).replace('/', '\\')
 
