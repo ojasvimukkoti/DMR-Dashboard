@@ -18,7 +18,7 @@ from DMR_presentation import DMRAnalysis
 st.set_page_config(layout='wide',
                    initial_sidebar_state="expanded")
 st.info("This is a sample of what the dashboard looks like. The official one requires users to upload\
-    the needed files.")
+    the DMR Log.")
 st.title("Analysis of DMR Log")
 
 
