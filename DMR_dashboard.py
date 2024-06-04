@@ -17,7 +17,8 @@ from DMR_presentation import DMRAnalysis
 #creating initial set-up of streamlit app
 st.set_page_config(layout='wide',
                    initial_sidebar_state="expanded")
-
+st.info("This is a sample of what the dashboard looks like. The official one requires users to upload\
+    the needed files.")
 st.title("Analysis of DMR Log")
 
 
@@ -462,7 +463,8 @@ def main():
                 if presentation_exists == True:
                     st.success(f'DMR Analysis for ***{formatted_current_date}*** is **already** in "P:\Quality\DMR\APCD Daily DMR Log".')
                 else:
-                    st.info("Presentation of all data visulaizations in dashbaord will be put in PowerPoint.")
+                    st.info("Presentation of all data visulaizations in dashbaord will be put in PowerPoint.\
+                    Function calls a class that will generate the PowerPoint.")
     else:
         st.warning('No data selected. Please ***upload*** the **"DMR MASTER LIST - USE THIS LOG"**.')
 
